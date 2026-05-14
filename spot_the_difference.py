@@ -1,3 +1,9 @@
+"""
+Sydney Group 16
+1. Mejbah Md Fahim - S400658 
+2. 
+"""
+
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import cv2
