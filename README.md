@@ -66,13 +66,15 @@ README.md
 github\_link.txt
 
 
-## OOP design
-Class         	        Responsibility
-`Difference`	          Data model for one hidden region; tracks position, type, and found-state
-`ImageProcessor`	      OpenCV image loading and patch alteration (5 types)
-`GameState`	            Mistake counting, score tracking, lock-out logic
-`SpotTheDifferenceApp`	Tkinter GUI; inherits from `tk.Tk`
 
+## OOP Design
+
+| Class | Responsibility |
+|---|---|
+| `Difference` | Data model for one hidden region; tracks position, type, and found-state |
+| `ImageProcessor` | OpenCV image loading and patch alteration (5 types) |
+| `GameState` | Mistake counting, score tracking, lock-out logic |
+| `SpotTheDifferenceApp` | Tkinter GUI; inherits from `tk.Tk` |
 ## OOP principles used
 Encapsulation – each class owns its own data and exposes a clean interface.
 Constructor (`\_\_init\_\_`) – every class initialises its own state.
