@@ -75,18 +75,26 @@ github\_link.txt
 | `ImageProcessor` | OpenCV image loading and patch alteration (5 types) |
 | `GameState` | Mistake counting, score tracking, lock-out logic |
 | `SpotTheDifferenceApp` | Tkinter GUI; inherits from `tk.Tk` |
-## OOP principles used
-Encapsulation – each class owns its own data and exposes a clean interface.
-Constructor (`\_\_init\_\_`) – every class initialises its own state.
-Methods – behaviour is modelled as instance methods, not loose functions.
-Inheritance – `SpotTheDifferenceApp` extends `tk.Tk`.
-Polymorphism – `\_apply\_alteration` dispatches to different alteration branches via a string tag, behaving differently for the same method call depending on `diff\_type`.
-Class interaction – `SpotTheDifferenceApp` owns and delegates to both `ImageProcessor` and `GameState`.
 
-## Image alteration types (OpenCV)
-colour_shift – shifts the hue and saturation channels in HSV space.
-blur – applies a large-kernel Gaussian blur to the patch.
-brightness – adds or subtracts a fixed value across all channels.
-noise – scatter random black/white pixels (salt-and-pepper).
-swap_channels – exchanges the R and B channels inside the patch.
+## OOP principles used
+
+
+- **Encapsulation** – each class owns its own data and exposes a clean interface.
+- **Constructor (`__init__`)** – every class initialises its own state.
+- **Methods** – behaviour is modelled as instance methods, not loose functions.
+- **Inheritance** – `SpotTheDifferenceApp` extends `tk.Tk`.
+- **Polymorphism** – `_apply_alteration` dispatches to different alteration branches 
+via a string tag, behaving differently for the same method call depending on `diff_type`.
+- **Class interaction** – `SpotTheDifferenceApp` owns and delegates to both 
+`ImageProcessor` and `GameState`.
+
+---
+
+## Image Alteration Types (OpenCV)
+1. `colour_shift` – shifts the hue and saturation channels in HSV space.
+2. `blur` – applies a large-kernel Gaussian blur to the patch.
+3. `brightness` – adds or subtracts a fixed value across all channels.
+4. `noise` – scatter random black/white pixels (salt-and-pepper).
+5. `swap_channels` – exchanges the R and B channels inside the patch.
+
 All alterations are deliberately subtle enough to require careful inspection.
