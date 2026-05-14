@@ -26,7 +26,7 @@ Install dependencies (once):
 
 pip install opencv-python pillow
 
-Run the Application
+## Run the Application
 
 1. Extract the ZIP file to a folder on your computer (e.g. Desktop)
 2. In Command Prompt, navigate to that folder by typing:
@@ -39,7 +39,7 @@ python spot_the_difference.py
 
 
 
-2. Click Load Image and pick any `.jpg`, `.png`, or `.bmp` file.
+## Click Load Image and pick any `.jpg`, `.png`, or `.bmp` file.
 
 ## How to play
 
@@ -59,21 +59,21 @@ Once the game window opens:
 8. Load a new image anytime to play again
 
    
-Project structure
+## Project structure
 
 spot\_the\_difference.py   ← single-file application (all 4 classes)
 README.md
 github\_link.txt
 
 
-OOP design
+## OOP design
 Class         	        Responsibility
 `Difference`	          Data model for one hidden region; tracks position, type, and found-state
 `ImageProcessor`	      OpenCV image loading and patch alteration (5 types)
 `GameState`	            Mistake counting, score tracking, lock-out logic
 `SpotTheDifferenceApp`	Tkinter GUI; inherits from `tk.Tk`
 
-OOP principles used
+## OOP principles used
 Encapsulation – each class owns its own data and exposes a clean interface.
 Constructor (`\_\_init\_\_`) – every class initialises its own state.
 Methods – behaviour is modelled as instance methods, not loose functions.
@@ -81,7 +81,7 @@ Inheritance – `SpotTheDifferenceApp` extends `tk.Tk`.
 Polymorphism – `\_apply\_alteration` dispatches to different alteration branches via a string tag, behaving differently for the same method call depending on `diff\_type`.
 Class interaction – `SpotTheDifferenceApp` owns and delegates to both `ImageProcessor` and `GameState`.
 
-Image alteration types (OpenCV)
+## Image alteration types (OpenCV)
 colour_shift – shifts the hue and saturation channels in HSV space.
 blur – applies a large-kernel Gaussian blur to the patch.
 brightness – adds or subtracts a fixed value across all channels.
