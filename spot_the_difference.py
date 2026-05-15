@@ -1,7 +1,9 @@
 """
 Sydney Group 16
 1. Mejbah Md Fahim - S400658 
-2. 
+2. Md Showkotul Islam - S399845
+3. Sharika Alam - S401269
+4. Jannatul Naima -S400577
 """
 
 import tkinter as tk
